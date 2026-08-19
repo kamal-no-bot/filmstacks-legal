@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reelbox Privacy Policy</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#fff; --fg:#1a1a1a; --muted:#555;
+            --accent:#4F46E5; --rule:#e5e5e5; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#0e1016; --fg:#e9eaf3; --muted:#9fa3b6;
+              --accent:#8B8CF5; --rule:#242737; } }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { background:var(--bg); color:var(--fg);
+           font:17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI",
+           Roboto, Helvetica, Arial, sans-serif; padding:3rem 1.25rem 5rem; }
+    main { max-width:44rem; margin:0 auto; }
+    h1 { font-size:2rem; line-height:1.2; margin-bottom:.35rem; }
+    .meta { color:var(--muted); font-size:.95rem; margin-bottom:2.25rem; }
+    h2 { font-size:1.25rem; margin:2.25rem 0 .6rem; padding-top:1.5rem;
+         border-top:1px solid var(--rule); }
+    p { margin-bottom:.9rem; } ul { margin:0 0 .9rem 1.4rem; }
+    li { margin-bottom:.45rem; } strong { font-weight:600; }
+    .highlight { border-left:3px solid var(--accent); padding:.75rem 1rem;
+                 margin:1.25rem 0; border-radius:0 8px 8px 0;
+                 background:color-mix(in srgb, var(--accent) 7%, var(--bg)); }
+    a { color:var(--accent); }
+    table { border-collapse:collapse; width:100%; margin-bottom:.9rem; }
+    th, td { text-align:left; padding:.5rem .6rem; border-bottom:1px solid var(--rule); }
+    th { font-weight:600; }
+  </style>
+</head>
+<body><main>
+  <h1>Reelbox Privacy Policy</h1>
+  <p class="meta">Effective date: August 19, 2026</p>
+
+  <p>Reelbox is a catalogue of the films you own on disc. It is built to work
+  without an account, and it is deliberately built so that almost nothing about
+  your collection ever leaves your phone. The short version:</p>
+
+  <div class="highlight"><p><strong>Your collection stays on your device and,
+  if you choose, in your own iCloud Drive.</strong> There are no accounts, no
+  user database of ours, no ads, no analytics, no third-party SDKs, no tracking
+  and no data sale. We cannot see what films you own.</p></div>
+
+  <h2>Your library</h2>
+  <p>Titles, shelves, formats, editions, ratings, notes, custom fields, wishlist
+  entries and your own cover photos are stored in a file on your device. We hold
+  no copy and we cannot read it.</p>
+
+  <h2>iCloud backup (optional, off by default)</h2>
+  <p>If you turn on iCloud backup, Reelbox writes the same snapshot the manual
+  export produces into <em>your own private iCloud Drive</em>, under your Apple
+  Account, in a container reserved for this app. We operate no server for it, we
+  hold no copy and we cannot read it. It can be turned off in Settings at any
+  time, and deleting the app's iCloud data removes it.</p>
+
+  <h2>Film metadata, and the one request that leaves your phone</h2>
+  <p>Film titles, posters, cast, runtimes and streaming availability come from
+  <strong>The Movie Database (TMDB)</strong>. Reelbox does not call TMDB
+  directly. It calls a small service we run on Cloudflare, which holds the TMDB
+  key so that it is not shipped inside the app.</p>
+  <p>That service receives, and only for as long as it takes to answer:</p>
+  <ul>
+    <li>the film title you typed into search, or the film id you opened</li>
+    <li>the barcode digits, when you scan a disc</li>
+    <li>the ordinary technical details every internet request carries, such as
+        an IP address and a timestamp</li>
+  </ul>
+  <p>It receives <strong>no account, no name, no email, no device identifier and
+  no advertising identifier</strong>, because the app has none to send. Nothing
+  ties one request to another or to you. Answers from TMDB are cached by film,
+  not by person.</p>
+
+  <h2>The shared barcode map</h2>
+  <p>Disc barcodes are not in any public film database, so Reelbox builds the
+  map from its users. When you <em>confirm</em> that a scanned barcode is a
+  particular film, that single pairing (barcode, film) is stored so the next
+  person who scans that disc is spared the work.</p>
+  <p>What is stored is only the pairing and a count. There is nothing attached
+  to it that could identify you, and it says nothing about the rest of your
+  collection. Scanning alone stores nothing; only a confirmation does. If you
+  would rather contribute nothing, you can add titles by searching instead of
+  scanning.</p>
+
+  <h2>Camera and photos</h2>
+  <p>The camera is used to read the barcode on a case and to look at the cover
+  so Reelbox can tell a 4K release from a Blu-ray. <strong>All of that runs on
+  your device</strong>, using Apple's Vision framework. Camera frames are never
+  uploaded and never stored. If you choose your own cover photo for a title, it
+  is saved on your device and goes nowhere else.</p>
+
+  <h2>Exports and shared images</h2>
+  <p>CSV exports, backup files and the shelf poster image are produced on your
+  device and go only where you send them. Reelbox uploads none of them.</p>
+
+  <h2>Purchases</h2>
+  <p>Reelbox Pro is sold through Apple's In-App Purchase. Apple processes the
+  payment and tells the app whether a subscription is active. We never see your
+  name, your payment details or your Apple Account.</p>
+
+  <h2>Service providers</h2>
+  <ul>
+    <li><strong>Cloudflare</strong> hosts the small service described above and
+        processes those requests on our behalf.</li>
+    <li><strong>TMDB</strong> supplies the film metadata and artwork. Reelbox is
+        not endorsed or certified by TMDB.</li>
+    <li><strong>Apple</strong> handles purchases and, if you enable it, your
+        iCloud Drive backup.</li>
+  </ul>
+
+  <h2>Deleting your data</h2>
+  <p>Deleting a title removes it from the app. Deleting Reelbox removes the
+  on-device library entirely. If you used iCloud backup, remove that copy in
+  Settings, Apple Account, iCloud, Manage Account Storage. A barcode
+  confirmation you contributed cannot be traced back to you, so there is nothing
+  personal to remove from it; if you would like a specific pairing corrected,
+  email us and we will fix it.</p>
+
+  <h2>Data collection summary</h2>
+  <table>
+    <tr><th>Category</th><th>What Reelbox collects</th></tr>
+    <tr><td>Data used to track you</td><td><strong>None</strong></td></tr>
+    <tr><td>Data linked to you</td><td><strong>None</strong></td></tr>
+    <tr><td>Data not linked to you</td><td>Search terms and scanned barcodes,
+        used to answer the request and to build the shared barcode map</td></tr>
+  </table>
+  <p>There is no analytics SDK, no advertising identifier and no third-party
+  tracker in the app.</p>
+
+  <h2>Children's privacy</h2>
+  <p>Reelbox is not directed at children under 13 and collects no personal data
+  from anyone, of any age.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If this policy changes, the effective date above changes with it, and a
+  material change will be noted in the app's release notes.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about privacy, or anything else:
+  <a href="mailto:engr.kamalnasir@gmail.com">engr.kamalnasir@gmail.com</a>.
+  See also the <a href="support.html">Reelbox support page</a>.</p>
+</main></body>
+</html>
