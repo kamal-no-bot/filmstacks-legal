@@ -55,7 +55,7 @@
   hold no copy and we cannot read it. It can be turned off in Settings at any
   time, and deleting the app's iCloud data removes it.</p>
 
-  <h2>Film metadata, and the one request that leaves your phone</h2>
+  <h2>Film metadata, and the requests that leave your phone</h2>
   <p>Film titles, posters, cast, runtimes and streaming availability come from
   <strong>The Movie Database (TMDB)</strong>. FilmStacks does not call TMDB
   directly. It calls a small service we run on Cloudflare, which holds the TMDB
@@ -71,6 +71,10 @@
   no advertising identifier</strong>, because the app has none to send. Nothing
   ties one request to another or to you. Answers from TMDB are cached by film,
   not by person.</p>
+  <p>When a scanned barcode is unknown to the shared map, the app also asks a
+  product-database service what retail product carries that barcode. That
+  request contains the barcode digits and the ordinary technical details every
+  internet request carries, and nothing else.</p>
 
   <h2>The shared barcode map</h2>
   <p>Disc barcodes are not in any public film database, so FilmStacks builds the
@@ -79,7 +83,9 @@
   person who scans that disc is spared the work.</p>
   <p>What is stored is only the pairing and a count. There is nothing attached
   to it that could identify you, and it says nothing about the rest of your
-  collection. Scanning alone stores nothing; only a confirmation does. If you
+  collection. When nobody has confirmed a barcode yet, the app may store the
+  product database's unconfirmed suggestion for it, so the next scanner starts
+  from the same lead; confirmations are what make a pairing trusted. If you
   would rather contribute nothing, you can add titles by searching instead of
   scanning.</p>
 
@@ -103,6 +109,8 @@
   <ul>
     <li><strong>Cloudflare</strong> hosts the small service described above and
         processes those requests on our behalf.</li>
+    <li><strong>Google Cloud (Firestore)</strong> stores the shared barcode map
+        on our behalf.</li>
     <li><strong>TMDB</strong> supplies the film metadata and artwork. FilmStacks is
         not endorsed or certified by TMDB.</li>
     <li><strong>Apple</strong> handles purchases and, if you enable it, your
